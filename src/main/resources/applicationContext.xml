@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <context:component-scan base-package="concursantes" />
 
 	<!-- Codigo equivalente en Java: Malabarista concursante1 = new Malabarista(); -->
+	
+	<!--  
 	<bean id="solei" class="concursantes.Malabarista">
 		<constructor-arg value="10" />
 	</bean>
@@ -14,15 +20,13 @@
 		<constructor-arg ref="sonetoSorJuana" />
 	</bean>
 	
-	
-	<!-- Codigo Musico -->
-    <bean id="piano" class="concursantes.Piano"/>
+	<bean id="piano" class="concursantes.Piano"/>
 
 	<bean id="jasonPiano" class="concursantes.Musico">
 		<property name="cancion" value="Noche de Paz" />
 		<property name="instrumento" ref="piano"></property>
 	</bean>
-
+    -->
 	<!-- cambio de instrumento -->
 	<bean id="jasonSax" class="concursantes.Musico">
 		<property name="cancion" value="Equinox" /> <!-- bean interno (inner bean) -->

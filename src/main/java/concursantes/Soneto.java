@@ -1,7 +1,11 @@
 package concursantes;
 
+import org.springframework.stereotype.Component;
+
+@Component("poema")
 public class Soneto implements Poema {
 	public void recitar() {
+		// Implementación del soneto
 		String sonetoPasionSorJuana = "Este, que ves, engaño colorido, \n" + "que del arte ostentando los primores,\n"
 				+ "con falsos silogismos de colores\n" + "es cauteloso engaño del sentido; \n"
 				+ "éste, en quien la lisonja ha pretendido\n" + "excusar de los años los horrores, \n"
