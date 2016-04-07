@@ -4,5 +4,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Codigo equivalente en Java: Malabarista concursante1 = new Malabarista(); -->
-	<bean id="solei" class="concursantes.Malabarista" />
+	<bean id="solei" class="concursantes.Malabarista">
+		<constructor-arg value="10" />
+	</bean>
+
+	<bean id="sonetoSorJuana" class="concursantes.Soneto" />
+	<bean id="soleiRecitador" class="concursantes.MalabaristaRecitador">
+		<constructor-arg value="15" />
+		<constructor-arg ref="sonetoSorJuana" />
+	</bean>
 </beans>
