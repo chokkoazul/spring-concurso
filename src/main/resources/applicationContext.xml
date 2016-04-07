@@ -13,4 +13,23 @@
 		<constructor-arg value="15" />
 		<constructor-arg ref="sonetoSorJuana" />
 	</bean>
+	
+	
+	<!-- Codigo Musico -->
+    <bean id="piano" class="concursantes.Piano"/>
+
+	<bean id="jasonPiano" class="concursantes.Musico">
+		<property name="cancion" value="Noche de Paz" />
+		<property name="instrumento" ref="piano"></property>
+	</bean>
+
+	<!-- cambio de instrumento -->
+	<bean id="jasonSax" class="concursantes.Musico">
+		<property name="cancion" value="Equinox" /> <!-- bean interno (inner bean) -->
+		<property name="instrumento">
+			<bean class="concursantes.Saxofon" />
+		</property>
+	</bean>
+	
+	
 </beans>
